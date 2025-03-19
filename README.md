@@ -2,6 +2,9 @@
 
 A [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) server for automated website deployment to 1Panel.
 
+> [!IMPORTANT]
+> Currently, this project is an experimental project and does not mean that it can be used directly.
+
 ## Features
 
 - Automates website deployment to 1Panel servers

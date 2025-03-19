@@ -100,11 +100,7 @@ class OnePanelAPI {
 
       const website = websites.find((w) => w.primaryDomain === domain);
 
-      if (website) {
-        return website;
-      } else {
-        throw new Error("Get website detail failed: API returned invalid data");
-      }
+      return website;
     } catch (error) {
       console.error("Get website detail failed:", error);
       throw new Error(`Get website detail failed: ${error.message}`);

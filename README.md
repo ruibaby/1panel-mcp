@@ -5,6 +5,10 @@ A [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) server for au
 > [!IMPORTANT]
 > Currently, this project is an experimental project and does not mean that it can be used directly.
 
+## Video demo
+
+<https://www.bilibili.com/video/BV1SjQRY3EmM/>
+
 ## Features
 
 - Automates website deployment to 1Panel servers

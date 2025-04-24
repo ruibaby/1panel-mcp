@@ -16,42 +16,7 @@ A [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) server for au
 - Uploads static website files to 1Panel
 - Fully compatible with the MCP standard protocol
 
-## Installation
-
-```bash
-# Clone the repository
-git clone https://github.com/yourusername/1panel-mcp-server.git
-cd 1panel-mcp-server
-
-# Install dependencies
-npm install
-# Or if you use pnpm
-pnpm install
-
-# Configure environment variables
-cp .env.example .env
-```
-
-Edit the `.env` file with your 1Panel server information:
-
-```bash
-PORT=3000
-ONEPANEL_BASE_URL=http://your-1panel-ip:port/api/v1
-ONEPANEL_API_KEY=your_api_key
-ONEPANEL_LANGUAGE=zh  # Language options: zh (Chinese) or en (English)
-```
-
 ## Usage
-
-### Start the server
-
-```bash
-# Start the server
-npm start
-
-# For development with auto-reload
-npm run dev
-```
 
 ### Configure MCP in Cursor IDE
 
@@ -63,8 +28,16 @@ To use this server with Cursor IDE, add the following MCP configuration:
 ```json
 {
   "mcpServers": {
-    "Deploy to 1Panel": {
-      "url": "http://localhost:3000/sse"
+    "1panel-mcp": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "1panel-mcp"
+      ],
+      "env": {
+        "ONEPANEL_BASE_URL": "<your 1Panel base URL>",
+        "ONEPANEL_API_KEY": "<your 1Panel API key>"
+      }
     }
   }
 }

@@ -6,7 +6,7 @@ import path from "path";
 
 class OnePanelAPI {
   constructor(config) {
-    this.baseURL = config.baseURL || "http://your-1panel-ip:port/api/v1";
+    this.baseURL = `${config.baseURL}/api/v1`;
     this.apiKey = config.apiKey;
     this.languageCode = config.languageCode || "zh";
   }
@@ -201,7 +201,9 @@ class OnePanelAPI {
       }
 
       const targetPath = path.join(sitePath, "index");
-      console.log(`Start uploading directory ${sourceDirPath} to website directory ${targetPath}`);
+      console.log(
+        `Start uploading directory ${sourceDirPath} to website directory ${targetPath}`
+      );
       const results = await this.uploadDirectory(
         sourceDirPath,
         targetPath,

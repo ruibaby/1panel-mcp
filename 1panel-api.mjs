@@ -100,7 +100,6 @@ class OnePanelAPI {
 
       return website;
     } catch (error) {
-      console.error("Get website detail failed:", error);
       throw new Error(`Get website detail failed: ${error.message}`);
     }
   }
@@ -127,7 +126,6 @@ class OnePanelAPI {
 
       return response.data.data || { message: "Upload success" };
     } catch (error) {
-      console.error(`Upload file failed: ${filePath}`, error);
       throw new Error(`Upload file failed: ${filePath} - ${error.message}`);
     }
   }
@@ -174,7 +172,6 @@ class OnePanelAPI {
           );
           results.push({ file, result, success: true });
         } catch (error) {
-          console.error(`Upload file ${file} failed:`, error.message);
           results.push({ file, error: error.message, success: false });
         }
       }
@@ -222,7 +219,6 @@ class OnePanelAPI {
         details: results,
       };
     } catch (error) {
-      console.error("Upload file failed:", error);
       throw new Error(`Upload file failed: ${error.message}`);
     }
   }

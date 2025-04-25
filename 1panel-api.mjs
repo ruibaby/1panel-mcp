@@ -68,8 +68,6 @@ class OnePanelAPI {
         { headers }
       );
 
-      console.log(response.data + "-------------");
-
       const website = await this.getWebsiteDetail(siteConfig.domain);
       return website;
     } catch (error) {

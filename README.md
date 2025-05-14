@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/ruibaby-1panel-mcp-badge.png)](https://mseep.ai/app/ruibaby-1panel-mcp)
+
 # 1Panel MCP Server
 
 A [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) server for automated website deployment to 1Panel.

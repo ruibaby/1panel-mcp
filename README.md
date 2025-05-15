@@ -1,5 +1,7 @@
 # 1Panel MCP Server
 
+[![smithery badge](https://smithery.ai/badge/@ruibaby/1Panel-mcp)](https://smithery.ai/server/@ruibaby/1Panel-mcp)
+
 A [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) server for automated website deployment to 1Panel.
 
 > [!IMPORTANT]

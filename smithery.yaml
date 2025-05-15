@@ -1,0 +1,37 @@
+# Smithery configuration file: https://smithery.ai/docs/build/project-config
+
+startCommand:
+  type: stdio
+  configSchema:
+    # JSON Schema defining the configuration options for the MCP.
+    type: object
+    required:
+      - onePanelBaseUrl
+      - onePanelApiKey
+    properties:
+      onePanelBaseUrl:
+        type: string
+        description: Base URL of the 1Panel server
+      onePanelApiKey:
+        type: string
+        description: API key for authenticating to 1Panel
+      onePanelLanguage:
+        type: string
+        default: zh
+        description: Language code for API responses
+  commandFunction:
+    # A JS function that produces the CLI command based on the given config to start the MCP on stdio.
+    |-
+    (config) => ({
+      command: 'node',
+      args: ['index.mjs'],
+      env: {
+        ONEPANEL_BASE_URL: config.onePanelBaseUrl,
+        ONEPANEL_API_KEY: config.onePanelApiKey,
+        ONEPANEL_LANGUAGE: config.onePanelLanguage || 'zh'
+      }
+    })
+  exampleConfig:
+    onePanelBaseUrl: https://api.1panel.example
+    onePanelApiKey: your_api_key_here
+    onePanelLanguage: en
